@@ -71,7 +71,7 @@
                   <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/CatColony/racoon/prjDBF.php">Raccoon Inn</a>
+                  <a class="nav-link" href="/raccoon/prjDBF.php">Raccoon Inn</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Pricing</a>
