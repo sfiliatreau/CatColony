@@ -112,14 +112,9 @@
             // echo 'DEBUG: $sql: ' . $sql . '<br />';
             // Create a database object
             // PARAMETERS: server, user, password, database'
-            $url = parse_url(getenv("CLEAR_DATABASE_URL"));
 
-            $server = $url["host"];
-            $username = $url["user"];
-            $password = $url["pass"];
-            $conn = substr($url["path"], 1);
 
-            $db = new mysqli($server, $username, $password, $conn); //local
+            $db = new mysqli('us-cdbr-east-05.cleardb.net', 'bceaf6f174ba2d', 'f5b37b09', 'heroku_177b596c63864ca'); //local
             //$db = new mysqli('sarahhoward.site', 'sarahhp6_web', '*DYmB2#$8F*b', 'sarahhp6_prjDBF'); //prod
 
             if ($db->connect_errno > 0) {
