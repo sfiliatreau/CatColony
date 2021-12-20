@@ -117,9 +117,9 @@
             $server = $url["host"];
             $username = $url["user"];
             $password = $url["pass"];
-            $db = substr($url["path"], 1);
+            $conn = substr($url["path"], 1);
 
-            $db = new mysqli($server, $username, $password, $db); //local
+            $db = new mysqli($server, $username, $password, $conn); //local
             //$db = new mysqli('sarahhoward.site', 'sarahhp6_web', '*DYmB2#$8F*b', 'sarahhp6_prjDBF'); //prod
 
             if ($db->connect_errno > 0) {
