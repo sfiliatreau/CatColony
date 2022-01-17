@@ -50,9 +50,11 @@
   </head>
   <body>
     <!-- Start your project here-->
+    <div class="container-fluid mask" style="background-color: rgba(0, 0, 0, 0.55); padding: 0px;">
+
       <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-gray-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gray-dark fixed-top" style="background-color: rgba(0, 0, 0);">
           <div class="container-fluid">
             <button
               class="navbar-toggler"
@@ -86,8 +88,9 @@
         <!-- Navbar -->
       </header>
       <main>
-        <div class="container-fluid mask" style="background-color: rgba(0, 0, 0, 0.55);">
-            <div class="d-flex pt-5 justify-content-left align-items-center">
+        
+        
+        <div class="d-flex pt-5 justify-content-left align-items-center">
               <div class="text-white">
                 <h1 class="mb-3">Heading</h1>
                 <h4 class="mb-3">Subheading</h4>
@@ -107,8 +110,8 @@
               <br />
             </div>
           </div>
-        </div>
       </main>
+    </div>
     </div>
     <!-- End your project here-->
 

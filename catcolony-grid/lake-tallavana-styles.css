@@ -1,0 +1,222 @@
+/*
+Sarah Howard
+CSC 135
+Assignment 5 - Grid
+lake-tallavana-styles.css
+2020-04-18
+
+contents-----
+  -basic styles
+  -grid styles
+  -header and nav styles
+  -main styles
+  -footer styles
+*/
+
+
+/* basic styles -------------------------------------------------- */
+html {
+  box-sizing: border-box;
+}
+*{
+  box-sizing: inherit;
+}
+body {
+  position: absolute;
+  max-width: 100%;
+  margin: 0;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+
+/* grid styles --------------------------------------------------- */
+
+  /* single-row grid styles ----------
+      make layout editing very easy.
+      numbers are left column span - right column span
+      corresponding grid areas are named
+      all use same two styles for left and right.
+      could easily expand this to multi-row or more than 2 spans
+  */
+.grid3-2 {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "left right";
+}
+.grid3-3 {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  grid-template-rows: auto;
+  grid-template-areas: "left right";
+}
+.grid4-2 {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: "left right";
+}
+.onGridLeft {
+  grid-area: left;
+}
+.onGridRight {
+  grid-area: right;
+}
+
+/* image gallery grid styles*/
+.gridGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: row;
+    align-content: top;
+    margin-right: 5px;
+}
+.gridGallery div {
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* header and nav styles ------------------------------------------*/
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: sticky;
+  top: 0;
+  min-height: 10vh;
+  max-height: 100%;
+  margin: 0;
+  padding: .5em;
+  background-color: black;
+}
+h1 {
+  margin: 0 .5em;
+  font-size: 2em;
+  font-size: min(4vw, 3em);
+  width: 25%;
+}
+h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-end;
+  width: 75%;
+}
+nav a {
+  display: block;
+  height: min-content;
+  padding: 0 1em;
+  margin: 0;
+  font-size: min(3vw, 1.5em);
+  color: inherit;
+  text-decoration: none;
+}
+nav a:hover,
+nav a:focus {
+  color: skyblue;
+}
+#skipNav {
+  background-color: powderblue;
+  color: black;
+  margin: 0 auto;
+  position: absolute;
+  top: .5em;
+  left: 26%;
+  padding: 8px;
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+#skipNav:focus {
+  transform: translateY(0%);
+}
+
+
+/*main styles -------------------------------------------------*/
+section {
+  margin: 0 0 5px 0;
+  padding: 0;
+  min-height: 90vh;
+  scroll-margin-top: 10vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  color: white;
+}
+h2 {
+  overflow-wrap: break-word;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3.75vw;
+  font-size: 1.2em;
+  font-size: min(3.75vw, 2em);
+  text-align: center;
+}
+h3 {
+  margin-bottom: .2em;
+}
+img {
+  margin: 5px;
+  overflow: hidden;
+}
+img:hover {
+  transform: scale(1.2);
+  transition: .3s;
+}
+p {
+  line-height: 1.5em;
+}
+#about {
+  background-image: url("images/about.jpg");
+}
+#news {
+  background-image: url("images/news.jpg");
+}
+#gallery {
+  background-color: black;
+}
+#contact {
+  min-height: 85vh;
+  max-height: 100%;
+  background-image: url("images/contact.jpg");
+  align-items: start;
+}
+a.learnMore {
+  color: peachpuff;
+}
+a.learnMore:hover,
+a.learnMore:focus {
+  color: skyblue;
+}
+.sectionText {
+  display: flex;
+  margin: auto 2em;
+  padding: 1em;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  overflow: auto;
+  background-color: #000000CC;
+}
+
+
+/* footer styles ----------------------------------------------*/
+footer {
+  margin: 0;
+  padding-left: 5px;
+  height: 5vh;
+  font-family: 'Julius Sans One', sans-serif;
+}
