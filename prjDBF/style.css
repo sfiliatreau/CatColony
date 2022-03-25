@@ -1,0 +1,233 @@
+/*
+Sarah Howard
+CSC 235
+Project 2 - Database Form
+style.css
+2021-11-07
+
+contents-----
+  -imported styles
+  -basic styles
+  -container styles
+  -nav styles
+  -main text styles
+  -table styles
+  -form styles
+  -media queries
+*/
+
+
+/* imported styles -------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+
+/* basic styles -------------------------------------------------- */
+
+html {
+  box-sizing: border-box;
+}
+*{
+  box-sizing: inherit;
+}
+body {
+  width: 100%;
+  margin: 0;
+  background-color: rgb(76, 86, 95);
+  font-family: 'Open Sans', sans-serif;}
+
+#pageContainer {
+  margin: 0 auto;
+  background-color: white;
+  border: 2px solid black;
+}
+
+
+/* container styles -------------------------------------------------- */
+
+header,
+footer {
+  margin: 0;
+  padding: 1em;
+  background-color: black;
+  color: white;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  overflow: auto;
+}
+
+
+/* nav styles -------------------------------------------------- */
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+nav ul li a {
+  display: block;
+  padding: .5em 1em;
+  margin: .5em;
+  font-size: 1em;
+  color: inherit;
+}
+nav a:hover,
+nav a:focus {
+  color: #E83B46;
+  border-color: #E83B46;
+}
+#skipNav {
+  margin: 0 auto;
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  padding: 8px;
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+  z-index: 1000;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+#skipNav:focus {
+  transform: translateY(0%);
+}
+
+
+/* main text styles -------------------------------------------------- */
+
+h1 {
+  margin: 1rem auto .5rem;
+  padding: .2rem 1rem;
+  font-family: sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  color: #AD141F;
+}
+h2 {
+  padding: .2rem 1rem;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  margin: 1em 0 .2em 0;
+  border-bottom: 2px solid #AD141F;
+}
+header h2 {
+  padding: .2rem 1rem;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  margin: 0 0 .2em 0;
+  border-bottom: 2px solid #AD141F;
+}
+h2.banner {
+  padding-left: 1em;
+  background-color: #AD141F;
+  color:white;
+}
+p {
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+
+/* table styles -------------------------------------------------- */
+
+caption {
+  text-align: left;
+  margin-bottom: 1em;
+}
+table{
+  margin-left: 1rem;
+}
+table, th, td {
+  max-width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: white;
+}
+th, td {
+  padding: .5em;
+  vertical-align: top;
+}
+th {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+
+/* form styles -------------------------------------------------- */
+
+legend {
+  width: 100%;
+  margin: 0 0 .2em 0;
+}
+fieldset {
+  border: none;
+}
+textarea {
+  width: 100%;
+  height: 10em;
+}
+
+
+/* background images -------------------------------------------------- */
+
+
+/*   #mainContent {
+    background-image: url("graphic/raccoonStanding.png");
+    image from Please Don't sell My Artwork AS IS on Pixabay https://pixabay.com/vectors/nordic-scandia-birds-advent-4448407/
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: bottom 10px right 20px;
+  } */
+
+
+/* media queries -------------------------------------------------- */
+
+/*printer friendly option*/
+@media print {
+  body, #pageContainer {
+    width: 100%;
+    padding:0;
+    margin:0;
+    border: none;
+    background-color: white;
+    color: black;
+  }
+  header, footer, #contact {
+    display: none;
+  }
+  table {
+    margin: auto;
+  }
+  table, th, td {
+  max-width: 100%;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-collapse: collapse;
+
+  }
+  a:after {
+    color: black;
+    text-decoration: none;
+    border: none;
+    content: " ("attr(href)")";
+  }
+}
+@page {
+  margin: 2cm;
+}
