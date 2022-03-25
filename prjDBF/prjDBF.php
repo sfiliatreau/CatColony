@@ -13,9 +13,9 @@
         Credit: based on Lessons 3 and 4 from class (couldn't find author info)
         -->
 
-    <title>Raccoon B&B Overstock Shop | Inventory</title>
+    <title>CatColony Benefit Shop | Inventory</title>
 
-    <meta name="description" content="Inventory for Raccoon B&B's Overstock Shop">
+    <meta name="description" content="Inventory for CatColony's Benefit Shop">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
 
