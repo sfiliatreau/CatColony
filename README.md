@@ -1,4 +1,0 @@
-# CatColony
-
-## Purpose
-Cat stuff
