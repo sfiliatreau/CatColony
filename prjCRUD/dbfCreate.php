@@ -10,7 +10,7 @@
         dbfCreate.php
         2022.04.03
 
-        Credit: based on Lessons 3 and 4 from class (couldn't find author info)
+        Credit: based on Lessons 4 and 5 from class (couldn't find author info)
         -->
 
     <title>Raccoon B&B Overstock Shop | Inventory</title>
@@ -25,16 +25,17 @@
         define("ECHO_SQL", false);
         
         // Set up connection constants
-        // LOCAL
+        /*// LOCAL
         define("SERVER_NAME", "localhost");
         define("DBF_USER_NAME", "root");
         define("DBF_PASSWORD", "mysql");
-
-        /*// PROD
-            define("SERVER_NAME", "sarahhoward.site");
-            define("DBF_USER_NAME", "sarahhp6");
-            define("DBF_PASSWORD", "^*KDg#c9VxS2");
         */
+        // PROD
+           define("SERVER_NAME", "http://us-cdbr-east-05.cleardb.net");
+           define("DBF_USER_NAME", "bceaf6f174ba2d");
+           define("DBF_PASSWORD", "f5b37b09");
+           define("DBF_DATABASE", "raccoonBnB");
+        
 
         // Create server connection object
         $conn = new mysqli(SERVER_NAME, DBF_USER_NAME, DBF_PASSWORD);
