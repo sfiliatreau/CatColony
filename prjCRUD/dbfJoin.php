@@ -25,18 +25,18 @@
        define("ECHO_SQL", false);
        
        // Set up connection constants
-       // LOCAL
+       /*// LOCAL
        define("SERVER_NAME", "localhost");
        define("DBF_USER_NAME", "root");
        define("DBF_PASSWORD", "mysql");
        define("DBF_DATABASE", "raccoonBnB");
-
-       /*// PROD
+*/
+       // PROD
            define("SERVER_NAME", "http://us-cdbr-east-05.cleardb.net");
            define("DBF_USER_NAME", "bceaf6f174ba2d");
            define("DBF_PASSWORD", "f5b37b09");
            define("DBF_DATABASE", "raccoonBnB");
-       */
+       
 
         // Create connection object
         $conn = new mysqli(SERVER_NAME, DBF_USER_NAME, DBF_PASSWORD);
